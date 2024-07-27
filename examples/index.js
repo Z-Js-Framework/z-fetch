@@ -1,5 +1,5 @@
 'use strict';
-import { DELETE, GET, PATCH, POST, PUT } from '../index.js';
+import { DELETE, GET, PATCH, POST, PUT } from '@z-js-framework/z-fetch';
 
 let loader = document.getElementById('loading');
 let refetchBtn = document.getElementById('refetch');

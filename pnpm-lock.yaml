@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@z-js-framework/z-fetch':
+        specifier: ^0.0.1
+        version: 0.0.1
     devDependencies:
       jsdoc:
         specifier: ^4.0.3
@@ -294,6 +298,9 @@ packages:
 
   '@types/mdurl@2.0.0':
     resolution: {integrity: sha512-RGdgjQUZba5p6QEFAVx2OGb8rQDL/cPRG7GiedRzMcJ1tYnUANBncjbSB1NRGwbvjcPeikRABz2nshyPk1bhWg==}
+
+  '@z-js-framework/z-fetch@0.0.1':
+    resolution: {integrity: sha512-ZoLG78kXjoeSJNa7U7eVce3k1AqkuSE8Fb4Fpi3/8i04iRKmu9VN1iM0/s18nk7RCB0RnZV037A2fx7OhXBUbA==}
 
   acorn@8.12.1:
     resolution: {integrity: sha512-tcpGyI9zbizT9JbV6oYE477V6mTlXvvi0T0G3SNIYE2apm/G5huBa1+K89VGeovbg+jycCrfhl3ADxErOuO6Jg==}
@@ -635,6 +642,8 @@ snapshots:
       '@types/mdurl': 2.0.0
 
   '@types/mdurl@2.0.0': {}
+
+  '@z-js-framework/z-fetch@0.0.1': {}
 
   acorn@8.12.1: {}
 

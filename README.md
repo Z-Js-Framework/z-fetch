@@ -1,4 +1,4 @@
-# ⚡ Z-Fetch v0.0.1
+# ⚡ Z-Fetch v0.0.2
 
 The mighty native fetch api wrapper made to enhance fetching in JavaScript Applications.
 
@@ -23,13 +23,13 @@ Originally made for [Z Js Framework](https://github.com/Z-Js-Framework/z-js) but
 1. Using npm, yarn or pnpm
 
 ``` bash
-npm install z-fetch
+npm install @z-js-framework/z-fetch
 ```
 
 2. Using a CDN
 
 ``` html
-<script src="https://cdn.jsdelivr.net/npm/z-fetch@latest/dist/z-fetch.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@z-js-framework/z-fetch@latest/dist/z-fetch.js"></script>
 ```
 
 or if your using [Z Js Framework](https://github.com/Z-Js-Framework/z-js) you don't have to install anything, this comes with the framework.
@@ -39,7 +39,7 @@ or if your using [Z Js Framework](https://github.com/Z-Js-Framework/z-js) you do
 ### GET Request
 
 ``` js
-import { GET } from 'z-fetch';
+import { GET } from '@z-js-framework/z-fetch';
 
 const getPosts = async () => {
    const { data, error, loading } = await GET('https://jsonplaceholder.typicode.com/posts');
@@ -54,7 +54,7 @@ const getPosts = async () => {
 ### POST Request
 
 ``` js
-import { POST } from 'z-fetch';
+import { POST } from '@z-js-framework/z-fetch';
 
 const createPost = async () => {
    const { data, error, loading } = await POST('https://jsonplaceholder.typicode.com/posts', {
@@ -75,7 +75,7 @@ const createPost = async () => {
 ### PUT Request
 
 ``` js
-import { PUT } from 'z-fetch';
+import { PUT } from '@z-js-framework/z-fetch';
 
 const updatePost = async () => {
    const { data, error, loading } = await PUT('https://jsonplaceholder.typicode.com/posts/1', {
@@ -96,7 +96,7 @@ const updatePost = async () => {
 ### PATCH Request
 
 ``` js
-import { PATCH } from 'z-fetch';
+import { PATCH } from '@z-js-framework/z-fetch';
 
 const modifyPost = async () => {
    const { data, error, loading } = await PATCH('https://jsonplaceholder.typicode.com/posts/1', {
@@ -115,7 +115,7 @@ const modifyPost = async () => {
 ### DELETE Request
 
 ``` js
-import { DELETE } from 'z-fetch';
+import { DELETE } from '@z-js-framework/z-fetch';
 
 const deletePost = async () => {
    const { error } = await DELETE('https://jsonplaceholder.typicode.com/posts/1');
@@ -132,7 +132,7 @@ const deletePost = async () => {
 ### Set Global Configuration
 
 ```js
-import { setConfig, GET } from 'z-fetch';
+import { setConfig, GET } from '@z-js-framework/z-fetch';
 
 setConfig({
   baseUrl: 'https://jsonplaceholder.typicode.com',
@@ -154,7 +154,7 @@ const getPosts = async () => {
 or set per request
 
 ```js
-import { GET } from 'z-fetch';
+import { GET } from '@z-js-framework/z-fetch';
 
 const getPosts = async () => {
    const { data, error, loading } = await GET('https://jsonplaceholder.typicode.com/posts', {
@@ -199,7 +199,7 @@ Here is the list of all the available options in addtion to native fetch's optio
 Alternatively you can set the bearer token globally for all requests using setBearerToken method as below:
 
 ```js
-import { setBearerToken } from 'z-fetch';
+import { setBearerToken } from '@z-js-framework/z-fetch';
 
 setBearerToken('your-bearer-token');
 ```
@@ -209,7 +209,7 @@ otherwise there more interesting things you can do even with each request, here 
 ### Polling
 
 ```js
-import { setConfig, GET } from 'z-fetch';
+import { setConfig, GET } from '@z-js-framework/z-fetch';
 
 setConfig({
   baseUrl: 'https://jsonplaceholder.typicode.com',
@@ -253,7 +253,7 @@ The code above will poll the API every 10 seconds until it reaches 100 pages, it
 ### Caching
 
 ```js
-import { GET } from 'z-fetch';
+import { GET } from '@z-js-framework/z-fetch';
 
 const getCachedPosts = async () => {
   const { data, error, loading } = await GET('https://jsonplaceholder.typicode.com/posts', {
@@ -271,7 +271,7 @@ const getCachedPosts = async () => {
 ### Request Cancelling
 
 ``` js
-import { GET } from 'z-fetch';
+import { GET } from '@z-js-framework/z-fetch';
 
 let cancelButton = document.getElementById('cancelButton');
 
@@ -290,7 +290,7 @@ cancelButton.addEventListener('click', () => cancelRequest());
 ### Refetching
 
 ``` js
-import { GET } from 'z-fetch';
+import { GET } from '@z-js-framework/z-fetch';
 
 let reloadButton = document.getElementById('reloadButton');
 
@@ -317,7 +317,7 @@ Refetch takes in a callback, it makes the same exact request with the same every
 you can just use z-fetch as normal fetch, it's just a wrapper around fetch and adds some extra features but in case you want to tap in and do some stuff sure, here is a quick example:
 
 ```js
-import { POST } from 'z-fetch';
+import { POST } from '@z-js-framework/z-fetch';
 
 const createPost = async () => {
   const { response } = await POST('https://jsonplaceholder.typicode.com/posts', {

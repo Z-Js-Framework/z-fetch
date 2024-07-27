@@ -1,0 +1,22 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@z-js-framework/z-fetch':
+        specifier: ^0.0.1
+        version: 0.0.1
+
+packages:
+
+  '@z-js-framework/z-fetch@0.0.1':
+    resolution: {integrity: sha512-ZoLG78kXjoeSJNa7U7eVce3k1AqkuSE8Fb4Fpi3/8i04iRKmu9VN1iM0/s18nk7RCB0RnZV037A2fx7OhXBUbA==}
+
+snapshots:
+
+  '@z-js-framework/z-fetch@0.0.1': {}
