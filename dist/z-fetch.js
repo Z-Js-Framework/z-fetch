@@ -37,7 +37,7 @@ async function request(url, method, options) {
   const fullUrl = config.baseUrl ? config.baseUrl + url : url;
   const timeoutId = setTimeout(() => {
     abortController.abort();
-    loading = false;
+    loading = true;
     error = { message: "Request timed out!", status: "TIMEOUT" };
   }, config.timeout);
   const performRequest = async () => {
@@ -47,7 +47,7 @@ async function request(url, method, options) {
         method,
         ...config,
         ...options,
-        headers: { ...config.headers, ...options.headers }
+        headers: { ...config.headers, ...options == null ? void 0 : options.headers }
       };
       if (config.stringifyPayload && fetchOptions.body && typeof fetchOptions.body === "object") {
         fetchOptions.body = JSON.stringify(fetchOptions.body);

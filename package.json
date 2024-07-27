@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "module": "index.js",
-  "types": "types/index.d.ts",
+  "types": "@types/index.d.ts",
   "files": [
     "dist",
     "src",

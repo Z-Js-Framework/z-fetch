@@ -99,7 +99,7 @@ async function request(url, method, options) {
 
   const timeoutId = setTimeout(() => {
     abortController.abort();
-    loading = false;
+    loading = true;
     error = { message: 'Request timed out!', status: 'TIMEOUT' };
   }, config.timeout);
 
@@ -110,7 +110,7 @@ async function request(url, method, options) {
         method,
         ...config,
         ...options,
-        headers: { ...config.headers, ...options.headers },
+        headers: { ...config.headers, ...options?.headers },
       };
 
       if (

@@ -117,7 +117,7 @@ const modifyPost = async () => {
 ``` js
 import { DELETE } from 'z-fetch';
 
-const updatePost = async () => {
+const deletePost = async () => {
    const { error } = await DELETE('https://jsonplaceholder.typicode.com/posts/1');
   if (!error) {
     console.log('item deleted successfully!');
