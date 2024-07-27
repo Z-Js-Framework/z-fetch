@@ -1,4 +1,4 @@
-# ⚡ Z-Fetch v0.0.2
+# ⚡ Z-Fetch
 
 The mighty native fetch api wrapper made to enhance fetching in JavaScript Applications.
 
